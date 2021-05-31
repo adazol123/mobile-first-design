@@ -76,16 +76,22 @@
     /*mix-blend-mode: screen;
     */cursor: pointer;
     transform-origin: center;
-    transition: transform 0.4s;
+    transition: transform 0.4s ease-out;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    -webkit-transition: transform 0.4s;
-    -moz-transition: transform 0.4s;
-    -ms-transition: transform 0.4s;
-    -o-transition: transform 0.4s;
+    -webkit-transition: transform 0.4s ease-out;
+    -moz-transition: transform 0.4s ease-out;
+    -ms-transition: transform 0.4s ease-out;
+    -o-transition: transform 0.4s ease-out;
+}
+.content button:hover , .content button:focus {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
+    background: var(--background-button);
+
 }
 .content button:hover {
     transform: scale(1.02);
@@ -123,15 +129,15 @@
         line-height: 4.5rem;
     }
     .wrapper p {
-        margin: 4rem 0;
-        font-size: 2rem;
+        margin: 2rem 0;
+        font-size: 1.5rem;
         font-weight: 200;
-        line-height: 2.8rem;
+        line-height: 2.3rem;
     }
     .content button {
-        height: 78px;
-        width: 300px;
-        font-size: 1.2rem;
+        height: 58px;
+        width: 220px;
+        font-size: 1rem;
     }
     .arrowGuide {
 

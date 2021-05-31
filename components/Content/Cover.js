@@ -1,7 +1,7 @@
 import styles from '../../styles/Cover.module.css'
 import Typical from 'react-typical'
 import { typewriter } from './typingData'
-import { CanvasObject } from '../Canvas/CanvasObject'
+import { CanvasObject, AnimationCanvas } from '../Canvas/CanvasObject'
 
 
 export const Cover = (params) => {
@@ -23,7 +23,7 @@ export const Cover = (params) => {
               </div>
               <div className={styles.contentImage}>
                 <div className={styles.contentImageWrapper}>
-                  <CanvasObject/>
+                  <CanvasObject />
                 </div>
               </div>
               <div className={styles.arrowGuide}>

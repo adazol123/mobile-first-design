@@ -4,9 +4,10 @@ import styles from '../styles/Home.module.css'
 import { Navbar } from '../components/Header/Navbar'
 import { useOnScreen } from '../components/Triggers/Observers'
 import { Cover } from '../components/Content/Cover'
+import { SceneCover } from '../components/Sections/SceneCover'
 
 export default function Home() {
-  const [setRef, visible] = useOnScreen({ threshold: 0.1})
+  const [setRef, visible] = useOnScreen({ threshold: 0.2})
   return (
     <div className={styles.container}>
       <Head>
@@ -34,16 +35,16 @@ export default function Home() {
                     background: visible? 'var(--gray-dark)' : 'var(--gray-500)',
                     color: visible? '#6D6D7A' : '#CDCDD1'
                 }}>
-            Section 1
+            <SceneCover />
          </section>
          <section className={styles.section}>
-            Section 2
+            😧 
          </section>
          <section className={styles.section} >
-            Section 3
+            😢 
          </section >
          <section className={styles.section}>
-           <button >Test</button>
+            😭 
          </section>
        </div>
 

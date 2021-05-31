@@ -37,6 +37,8 @@ a {
   --gradient-primary: linear-gradient(90deg, #34F7BE 0%, #61FD5A 105.78%);
   --gradient-secondary: linear-gradient(90deg, #34F7BE 0%, #5A88FD 105.78%);
 
+  --background-button: rgba(255, 255, 255, 0.05);
+
 
   --spacing: 16px;
 }

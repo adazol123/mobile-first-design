@@ -2,7 +2,9 @@ import { Suspense, useMemo, useRef, useState } from "react"
 import * as THREE from 'three'
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
 import styles from '../../styles/Canvas.module.css'
-import { OrbitControls, Stars } from '@react-three/drei'
+import stylesAsset from '../../styles/Asset.module.css'
+import { OrbitControls, Stars, Html, Shadow } from '@react-three/drei'
+import Scene from './Scene'
 
 let mouseY = 0
 let mouseX = 0
@@ -62,12 +64,60 @@ function AnimationCanvas() {
 
 
 
+
+
+
+
+function AnimatedAsset() {
+    return (
+        <Canvas
+            colorManagement
+            camera={{ position: [0, -100, 650] }}
+            gl={{ powerPreference: "high-performance", alpha: true, antialias: false, depth: true }}
+            // camera={{position: [0, 0, 700], fov: 75, near: 0.00001, far: 10000}}
+        >
+            <OrbitControls 
+                panSpeed={0.8}
+                rotateSpeed={0.7}
+                enableZoom={false}
+                minPolarAngle={Math.PI / 2.5}
+                maxPolarAngle={Math.PI / 2}
+            />
+            <ambientLight intensity={1}/>
+            <directionalLight intensity={1} />
+            <Suspense fallback={
+            <Html center style={{ fontSize:'0.8rem', color: '#5A88FD'}}>
+                <p>Loading...</p>
+            </Html>
+            }>
+            <Shadow
+                color="black"
+                colorStop={0}
+                opacity={0.5}
+                fog={false} // Reacts to fog (default=false)
+                />
+            <Scene/>
+            </Suspense>
+        </Canvas>
+    )
+}
+
+
 export const CanvasObject = (params) => {
 
     return( 
         <div className={styles.canvas_container}>
             <div className={styles.scene}>
                     <AnimationCanvas/>
+            </div>
+        </div>
+    )
+}
+export const AssetNinja = (params) => {
+    return( 
+        <div className={stylesAsset.canvas_container}>
+            <div className={stylesAsset.scene}>
+                    <AnimatedAsset/>
             </div>
         </div>
     )

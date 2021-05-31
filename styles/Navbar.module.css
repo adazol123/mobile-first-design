@@ -1,10 +1,16 @@
 /*  Resolution: 320px - 768px */
-.containerOn { 
+.containerOn {
     position: fixed;
     top: 0;
     z-index: 100;
     height: 100px;
     width: 100%;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+
 }
 
 .containerOff {
@@ -13,21 +19,30 @@
     z-index: 100;
     height: 70px;
     width: 100%;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
 }
 
 .wrapper {
-    width: 100%;
+    
+    width: 100vw;
     height: 100%;
     background: var(--secondary);
     position: relative;
     display: flex;
     justify-content: center;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
 
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
+
 }
 .wrapper::before{
     content: '';
@@ -51,6 +66,7 @@
    display: flex;
    align-items: center;
    height: 100%;
+  
 }
 .logo{
     display: flex;
@@ -59,10 +75,11 @@
 .logoIcon, .menuIcon{
     height: 40px;
     cursor: pointer;
+    margin-right: 4px;
 
 }
 .logoNameIcon {
-    margin-left: 4px;
+    margin-left: 1px;
     cursor: pointer;
     display: none;
 }

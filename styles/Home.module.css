@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   scroll-snap-type: both mandatory;
-  overflow: scroll;
+  overflow-y: scroll;
   overflow-x: hidden;
 
 }
@@ -37,6 +37,7 @@
 }
 
 .section:nth-of-type(1) {
+  /* padding-top: 70px; */
   background: var(--gray-500);
 }
 .section:nth-of-type(2) {

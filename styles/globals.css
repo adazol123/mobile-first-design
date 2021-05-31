@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-
+  overflow:hidden;
 }
 
 a {
@@ -27,15 +27,18 @@ a {
   --secondary-medium: #7B91C9;
   --secondary-light: #D8DEEE;
   --secondary-dark: #2A313A;
-  --gray-dark: #0A1931;
-  --gray-light: #F3F6F9;
   --gray-100: #CDCDD1;
   --gray-200: #9A9AA0;
   --gray-300: #6D6D7A;
   --gray-400: #43434D;
   --gray-500: #262F3D;
+  --gray-dark: #0A1931;
+  --gray-light: #F3F6F9;
   --gradient-primary: linear-gradient(90deg, #34F7BE 0%, #61FD5A 105.78%);
   --gradient-secondary: linear-gradient(90deg, #34F7BE 0%, #5A88FD 105.78%);
+
+
+  --spacing: 16px;
 }
 
 .logo {
@@ -47,3 +50,4 @@ canvas {
   height: 100%;
   position: absolute;
 }
+

@@ -39,7 +39,6 @@ export const Navbar = ({ params, navBG, navHeight, navColor, testClass }) => {
                     background: `${navBG}`,
                     // height: `${navHeight}`,
                     color: `${navColor}`,
-                    opacity: 1
                 }}>
                 <div className={styles.navbar}>
                     <div className={styles.logoContainer}>

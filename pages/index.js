@@ -18,8 +18,7 @@ export default function Home() {
 
        <div className={styles.wrapper}>
        <Navbar 
-        navBG={visible? 'transparent' : '#43434D'}
-        navHeight={visible? '100px' : '70px'}
+        navBG={visible? 'rgba(255, 255, 255, 0.01)' : 'var(--gray-dark)'}
         navColor={visible? '#2ACB9D' : '#43434D'}
         testClass={visible}
         />
@@ -29,11 +28,11 @@ export default function Home() {
             </div>
          </section>
          <section 
-            href=''
+            
             className={styles.section}  
             style={{ 
-                    background: visible? '#2ACB9D' : '#0A1931',
-                    color: visible? '#43434D' : '#CDCDD1'
+                    background: visible? 'var(--gray-dark)' : 'var(--gray-500)',
+                    color: visible? '#6D6D7A' : '#CDCDD1'
                 }}>
             Section 1
          </section>
